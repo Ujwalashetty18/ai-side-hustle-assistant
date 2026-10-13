@@ -1,17 +1,20 @@
 # 💡 AI Side-Hustle Assistant
 
-An AI-powered freelance project planner built with Python, Streamlit, and Ollama.
+An AI-powered freelance planning tool that transforms client requirements into a project proposal, task breakdown, estimated budget, and scope risk analysis.
 
-## Features
+Built with **Python, Streamlit, and Ollama**, using the open-weight Llama 3.2 model locally.
 
-- Generate professional freelance proposals.
-- Create project deliverables and implementation tasks.
-- Estimate project timelines and budgets in Indian rupees (INR).
-- Identify questions to clarify with clients.
-- Separate required deliverables from optional recommendations.
-- Download the generated project plan as a JSON file.
+## ✨ Features
 
-## Technology Stack
+- **AI Project Proposal:** Generate a professional proposal from a client's brief.
+- **Task Planning:** Break projects into practical tasks and estimated workdays.
+- **Budget Estimation:** Calculate an estimated budget in Indian rupees from task-level costs.
+- **Scope Risk Checker:** Identify uncertainties such as vague deadlines, changing requirements, and missing budget details.
+- **Client Clarification Questions:** Suggest questions to ask before accepting a project.
+- **Optional Recommendations:** Separate extra ideas from required deliverables.
+- **Project Plan Export:** Download the generated plan as a JSON file.
+
+## 🛠️ Tech Stack
 
 - Python
 - Streamlit
@@ -19,28 +22,30 @@ An AI-powered freelance project planner built with Python, Streamlit, and Ollama
 - Llama 3.2 (3B)
 - Requests
 
-## Prerequisites
+## ⚙️ Prerequisites
 
-- Python installed
-- [Ollama](https://ollama.com/) installed
-- Git installed
-
-## Installation
-
-Clone this repository and enter the project directory:
+Install Python and Git. Install [Ollama](https://ollama.com/) and download the model:
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
+ollama pull llama3.2:3b
+```
+
+## 🚀 Run Locally
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Ujwalashetty18/ai-side-hustle-assistant.git
 cd ai-side-hustle-assistant
 ```
 
 Create and activate a virtual environment.
 
-On Windows:
+**Windows — Git Bash:**
 
 ```bash
 py -m venv venv
-venv\Scripts\activate
+source venv/Scripts/activate
 ```
 
 Install dependencies:
@@ -49,30 +54,41 @@ Install dependencies:
 pip install -r requirements.txt
 ```
 
-Download the AI model:
-
-```bash
-ollama pull llama3.2:3b
-```
-
-Start Ollama, then run the application:
+Make sure Ollama is running, then start the application:
 
 ```bash
 streamlit run app.py
 ```
 
-Open the local URL shown in your terminal.
+Open the local URL shown in the terminal, usually `http://localhost:8501`.
 
-## How It Works
+## 🧪 Example Use Case
 
-Enter a project name and the client's requirements. The local AI model generates a proposal, deliverables, tasks, estimated workdays, and a budget. You can review the results in the dashboard and download the plan as JSON.
+A bakery owner wants a website with a product menu, prices, opening hours, location, and a contact form.
 
-## Important Notes
+The assistant generates a proposal, implementation tasks, estimated costs, questions for the client, and possible scope risks.
 
-- Project timelines and budgets are estimates, not guaranteed quotes.
-- Review AI-generated plans before sharing them with clients.
-- The application requires Ollama and the selected model to be available locally.
+## ⚠️ Limitations
 
-## License
+- Budgets and timelines are estimates, not guaranteed quotes.
+- AI-generated plans and risk assessments may contain mistakes or miss issues.
+- Review the plan and confirm requirements with the client before making commitments.
+- The local setup requires Ollama and the downloaded model.
 
-License information will be added before publication.
+## 🌱 Why Open Innovation Matters
+
+Running an open-weight model locally gives developers more control over their tools and data. The project can be inspected, modified, and extended by other developers.
+
+## 📄 License
+
+See the `LICENSE` file for the project's open-source license.
+
+## 👩‍💻 Author
+
+**Ujwala Shetty**
+
+GitHub: [Ujwalashetty18](https://github.com/Ujwalashetty18)
+
+---
+
+Built as part of the Hacktoberfest 2026 Side Hustle challenge.
