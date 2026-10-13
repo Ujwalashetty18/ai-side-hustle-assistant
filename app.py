@@ -50,14 +50,19 @@ Return ONLY valid JSON, without markdown fences, using this schema:
   "optional_recommendations": ["optional idea"]
 }}
 
+
 Rules:
+- Treat the client's requirements as the source of truth.
 - Include only explicitly requested features as required deliverables.
-- Put unrequested features only in optional_recommendations.
-- Do not add online payments or ordering unless requested.
+- Do not add a backend, database, CMS, login, payment system, or other infrastructure unless the requirements need it.
+- For a static portfolio or informational website, prefer a frontend-only solution unless the client requests more.
+- Put unrequested features and enhancements only in optional_recommendations.
+- Do not turn implementation suggestions into required deliverables.
 - Use positive whole numbers for days and cost_inr.
-- Keep the tasks practical and in implementation order.
-- Do not include a total budget or total timeline in the JSON.
+- Keep tasks practical and in implementation order.
+- Do not include a total budget or total timeline in the JSON; the application calculates these.
 - Do not invent client details.
+- If a technical decision is unclear, mention it in questions rather than assuming it is required.
 """
 
         try:
